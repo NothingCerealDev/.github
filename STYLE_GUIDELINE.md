@@ -80,10 +80,10 @@ if (myFlag == true)
 
 ### Directives
 - Allign directives (e.g. `#if`, `#define`, etc.) to the leftmost position with no indentation or tabulation.
-- Use `#region` to separate code blocks. BUT! First consider whether the code should be moved to a separate file instead. Align it as IDE automatically does.
+- Use `#region` to separate code blocks. BUT! First consider whether the code should be moved to a separate file instead.
 ```csharp
 #region My Region Name
-    ...
+...
 #endregion
 ```
 
