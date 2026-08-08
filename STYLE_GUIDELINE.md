@@ -28,10 +28,10 @@ We strive for code readability and scalability!
 - NO GLOBAL CLASSES - every script belongs to a namespace. Each separate logical cluster must have its own namespace. Keep namespace structure aligned with folder hierarchy, but make it reasonable and no deeper than two levels from base.
 ```csharp
 // Folder strusture: Game\Core\Audio\Managers.
-namespace Game.Core.Audio {}
+namespace Game.Core.Audio { }
 
-// Folder strusture: Game\External\Firebase\Processors.
-namespace Game.External {}
+// Folder strusture: External\Firebase\Processors.
+namespace External.Firebase { }
 ```
 
 
@@ -65,7 +65,11 @@ void Update()
     myCount++;
 }
 ```
-- Use `{ braces }` even for single-line control flow statements (e.g. `if`, `for`, `try`, etc.), leaving room for future additions.  
+- Use `{ braces }` even for single-line control flow statements (e.g. `if`, `for`, `try`, etc.), leaving room for future additions.
+- If a structure is empty - make it a one-liner.
+```csharp
+public class MyClass : MyParentClass { }
+```
 - Separate logic and `return` statement with one empty line in between.
 ```csharp
 if (myFlag == true)
